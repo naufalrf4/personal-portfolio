@@ -30,8 +30,9 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="hidden md:flex justify-center items-center gap-2">
-        {navLinks.map((link) => (
+        {navLinks.map((link, index) => (
           <Link
+            key={index}
             className={`${
               pathname === link.href
                 ? "text-primary font-bold text-base md:text-md"
@@ -43,6 +44,7 @@ const Navbar = () => {
           </Link>
         ))}
       </div>
+
       <div className="flex justify-center items-center gap-4">
         <ModeToggle />
         <Button className="flex md:hidden" size="icon" variant="ghost">
