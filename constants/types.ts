@@ -9,3 +9,9 @@ export type socialProps = {
   linkStyles?: React.CSSProperties | string;
   iconStyles?: React.CSSProperties | string;
 };
+
+export type imageProps = {
+  containerStyles?: React.CSSProperties | string;
+  imgSrc: string;
+  imgLink?: string;
+};

@@ -33,7 +33,7 @@ const MobileNav = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button size="icon" variant="ghost">
+        <Button id="hamburger" size="icon" variant="ghost">
           <AlignJustify className="w-6 h-6 cursor-pointer" />
         </Button>
       </SheetTrigger>
@@ -107,7 +107,7 @@ const Header = () => {
     <header
       className={`${
         header ? "py-4 bg-background shadow-lg" : "py-6 bg-transparent"
-      } sticky top-0 z-30 transition-all sm:px-10 md:px-10 xl:px-32 lg:px-20 ${pathname === "/" && 'bg-[#fef5fe] dark:bg-[#141423]'}`}
+      } sticky top-0 z-30 transition-all sm:px-10 md:px-10 xl:px-32 lg:px-20 ${pathname === "/" && 'bg-background'}`}
     >
       <div className="container mx-auto">
         <div className="flex items-center justify-between">

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Socials from "../partials/Socials";
 import { RiArrowDownSLine } from "react-icons/ri";
+import DevImage from "../partials/Image";
 
 const jobs = [
   "Undergraduate Student",
@@ -17,7 +18,7 @@ const jobs = [
 const HeroSection = () => {
   return (
     <section>
-      <div className="bg-[#fef5fe] dark:bg-[#141423] flex flex-col-reverse justify-between gap-14 p-8 py-14 sm:p-14 md:p-16 xl:p-44 xl:py-28 lg:p-28 lg:py-24 md:flex-row">
+      <div className="bg-background flex flex-col-reverse justify-between gap-14 p-8 py-14 sm:p-14 md:p-16 xl:p-44 xl:py-28 lg:p-28 lg:py-24 md:flex-row">
         <div className="md:w-1/2 flex flex-col justify-center space-y-8">
           <div className="space-y-1 md:space-y-2">
             <h1 className="font-semibold text-md md:text-lg xl:text-xl">
@@ -62,17 +63,11 @@ const HeroSection = () => {
           />
         </div>
         <div className="flex justify-center lg:justify-end items-center">
-          <div className="p-1 flex rounded-2xl outline outline-4 outline-primary w-[16rem] h-[16rem] md:w-[16rem] md:h-[16rem] lg:w-[18rem] lg:h-[18rem] xl:w-[20rem] xl:h-[20rem]">
-            <Link href="/about">
-              <Image
-                className="object-cover rounded-2xl"
-                src="/images/naufalrf.png"
-                alt="NaufalRF"
-                width={1024}
-                height={1024}
-              />
-            </Link>
-          </div>
+          <DevImage
+            containerStyles="p-1 flex rounded-2xl outline outline-4 outline-primary w-[16rem] h-[16rem] md:w-[16rem] md:h-[16rem] lg:w-[18rem] lg:h-[18rem] xl:w-[20rem] xl:h-[20rem]"
+            imgLink="/about"
+            imgSrc="/images/naufalrf.png"
+          />
         </div>
       </div>
       <div className="hidden md:flex items-center justify-center animate-bounce">

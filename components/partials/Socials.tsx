@@ -12,19 +12,19 @@ import { socialProps } from "@/constants/types";
 const socialLinks = [
   {
     path: "https://github.com/naufalrf4",
-    name: <RiGithubFill />,
+    element: <RiGithubFill />,
   },
   {
     path: "https://www.instagram.com/naufalrf__/",
-    name: <RiInstagramLine />,
+    element: <RiInstagramLine />,
   },
   {
     path: "https://www.linkedin.com/in/naufalrf/",
-    name: <RiLinkedinBoxFill />,
+    element: <RiLinkedinBoxFill />,
   },
   {
     path: "mailto:naufalrf4@gmail.com",
-    name: <RiMailFill />,
+    element: <RiMailFill />,
   },
 ];
 
@@ -33,8 +33,8 @@ const Socials: React.FC<socialProps> = ({ containerStyles, iconStyles }) => {
     <div className={`${containerStyles}`}>
       {socialLinks.map((icon, index) => {
         return (
-          <Link href={icon.path} key={index}>
-            <div className={`${iconStyles}`}>{icon.name}</div>
+          <Link href={icon.path} key={index} aria-label="Naufal RF Social Media Links">
+            <div className={`${iconStyles}`} >{icon.element}</div>
           </Link>
         );
       })}
