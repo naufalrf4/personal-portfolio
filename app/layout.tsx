@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/partials/Navbar";
 import { ThemeProvider } from "@/app/ThemeProvider";
+import Footer from "@/components/partials/Footer";
+import Header from "@/components/partials/Header";
 
 const font = Poppins({
   subsets: ["latin"],
@@ -30,8 +31,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          <main>{children}</main>
+          <Header />
+          {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

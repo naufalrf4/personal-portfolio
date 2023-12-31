@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
 
 @layer base {
   :root {
@@ -52,7 +51,6 @@
   }
 }
 
- 
 @layer base {
   * {
     @apply border-border;
@@ -61,3 +59,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+.h1 {
+  @apply text-6xl xl:text-[72px] xl:leading-[80px] tracking-[-2px] font-bold;
+}
+
