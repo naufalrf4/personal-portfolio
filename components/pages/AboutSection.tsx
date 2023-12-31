@@ -127,7 +127,7 @@ const AboutSection = () => {
           About Me
         </h2>
         <div className="flex flex-col lg:flex-row gap-8">
-          <div className="items-center justify-center flex flex-1 relative lg:items-center lg:justify-start">
+          <div className="hidden items-center justify-center lg:flex flex-1 relative lg:items-center lg:justify-start">
             <DevImage
               containerStyles="p-1 flex rounded-2xl outline outline-4 outline-primary w-[16rem] h-[16rem] lg:w-[18rem] lg:h-[18rem] xl:w-[20rem] xl:h-[20rem]"
               imgLink="/"
