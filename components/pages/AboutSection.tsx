@@ -44,12 +44,12 @@ const qualificationData = [
     title: "education",
     data: [
       {
-        title: "Bachelor of Science Computer Engineering",
+        title: "Computer Engineering",
         subtitle: "IPB University",
         date: "2022 - present",
       },
       {
-        title: "Vocational High School Computer and Network Engineering",
+        title: "Computer and Network Engineering",
         subtitle: "SMK Nasional Depok",
         date: "2019 - 2022",
       },
@@ -137,7 +137,7 @@ const AboutSection = () => {
           <div className="flex-1">
             <Tabs defaultValue="personal">
               <TabsList className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 lg:max-w-full xl:border dark:border-none">
-                <TabsTrigger value="personal">Personal Info</TabsTrigger>
+                <TabsTrigger value="personal">Personal</TabsTrigger>
                 <TabsTrigger value="education">Education</TabsTrigger>
                 <TabsTrigger value="experience">Experience</TabsTrigger>
                 <TabsTrigger value="skills">Skills</TabsTrigger>
@@ -158,13 +158,77 @@ const AboutSection = () => {
                 </div>
               </TabsContent>
               <TabsContent value="education">
-                <div>Education</div>
+                <div className="flex flex-col gap-4">
+                  {getData(qualificationData, "education").map(
+                    (item: any, index: number) => (
+                      <div
+                        key={index}
+                        className="flex flex-col gap-2 p-4 border-primary border-2 rounded-md"
+                      >
+                        <div className="flex items-center gap-4">
+                          <GraduationCap
+                            className="text-foreground"
+                            size={24}
+                          />{" "}
+                          <div>
+                            <h3 className="text-foreground font-semibold">
+                              {item.title}
+                            </h3>
+                            <p className="text-foreground">{item.subtitle}</p>
+                            <p className="text-foreground">{item.date}</p>
+                          </div>
+                        </div>
+                      </div>
+                    )
+                  )}
+                </div>
               </TabsContent>
               <TabsContent value="experience">
-                <div>Experience</div>
+                <div className="flex flex-col gap-4">
+                  {getData(qualificationData, "experience").map(
+                    (item: any, index: number) => (
+                      <div
+                        key={index}
+                        className="flex flex-col gap-2 p-4 border-primary border-2 rounded-md"
+                      >
+                        <div className="flex items-center gap-4">
+                          <Briefcase className="text-foreground" size={24} />{" "}
+                          <div>
+                            <h3 className="text-foreground font-semibold">
+                              {item.Company}
+                            </h3>
+                            <p className="text-foreground">
+                              {item.Qualification}
+                            </p>
+                            <p className="text-foreground">{item.date}</p>
+                          </div>
+                        </div>
+                      </div>
+                    )
+                  )}
+                </div>
               </TabsContent>
               <TabsContent value="skills">
-                <div>Skills</div>
+                <div className="flex flex-col gap-4">
+                  {getData(skillData, "skills").map(
+                    (item: any, index: number) => (
+                      <div
+                        key={index}
+                        className="flex flex-col gap-2 p-4 border-primary border-2 rounded-md"
+                      >
+                        <div className="flex items-center gap-4">
+                          <Briefcase className="text-foreground" size={24} />{" "}
+                          <div>
+                            <h3 className="text-foreground font-semibold">
+                              {item.title}
+                            </h3>
+                            <p className="text-foreground">{item.subtitle}</p>
+                          </div>
+                        </div>
+                      </div>
+                    )
+                  )}
+                </div>
               </TabsContent>
             </Tabs>
           </div>
