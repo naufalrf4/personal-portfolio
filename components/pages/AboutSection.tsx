@@ -10,9 +10,11 @@ import {
   Calendar,
   Briefcase,
   Users,
+  LayoutPanelTop,
 } from "lucide-react";
 import DevImage from "../partials/Image";
-
+import Link from "next/link";
+import { qualificationData, skillData } from "@/constants";
 const infoData = [
   {
     icon: <User2 size={24} />,
@@ -40,199 +42,6 @@ const infoData = [
   },
 ];
 
-const qualificationData = [
-  {
-    title: "education",
-    data: [
-      {
-        title: "Computer Engineering",
-        subtitle: "IPB University",
-        date: "2022 - present",
-      },
-      {
-        title: "Computer and Network Engineering",
-        subtitle: "SMK Nasional Depok",
-        date: "2019 - 2022",
-      },
-    ],
-  },
-  {
-    title: "work",
-    data: [
-      {
-        company: "PT Bank BTPN Tbk",
-        qualification:
-          "PBI: Fullstack Developer BTPN Syariah x Rakamin Academy",
-        date: "2022",
-      },
-      {
-        company: "PT. Miftah Putra Mandiri",
-        qualification: "Student Internship",
-        date: "2021",
-      },
-    ],
-  },
-  {
-    title: "organizational",
-    data: [
-      {
-        company: "Obscura Photography Club",
-        qualification: "Staff",
-        date: "2023 - present",
-      },
-      {
-        company: "Himavo Micro IT",
-        qualification: "Webmaster Mentor",
-        date: "2022 - present",
-      },
-
-      {
-        company: "Agrimovie Filmaker Club",
-        qualification: "Staff",
-        date: "2022 - present",
-      },
-    ],
-  },
-];
-
-const skillData = [
-  {
-    title: "skills",
-    data: [
-      {
-        title: "Frontend",
-        data: [
-          {
-            name: "HTML",
-            href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-            icon: "/images/icons/html.svg",
-          },
-          {
-            name: "CSS",
-            href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-            icon: "/images/icons/css.svg",
-          },
-          {
-            name: "Javascript",
-            href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-            icon: "/images/icons/javascript.svg",
-          },
-          {
-            name: "Typescript",
-            href: "https://www.typescriptlang.org/",
-            icon: "/images/icons/typescript.svg",
-          },
-          {
-            name: "React",
-            href: "https://reactjs.org/",
-            icon: "/images/icons/react.svg",
-          },
-          {
-            name: "Next.js",
-            href: "https://nextjs.org/",
-            icon: "/images/icons/nextjs.svg",
-          },
-          {
-            name: "Tailwind CSS",
-            href: "https://tailwindcss.com/",
-            icon: "/images/icons/tailwindcss.svg",
-          },
-          {
-            name: "Bootstrap",
-            href: "https://getbootstrap.com/",
-            icon: "/images/icons/bootstrap.svg",
-          },
-          {
-            name: "Framer Motion",
-            href: "https://www.framer.com/motion/",
-            icon: "/images/icons/framermotion.svg",
-          },
-        ],
-      },
-      {
-        title: "Backend",
-        data: [
-          {
-            name: "Node.js",
-            href: "https://nodejs.org/en/",
-            icon: "/images/icons/nodejs.svg",
-          },
-          {
-            name: "Express.js",
-            href: "https://expressjs.com/",
-            icon: "/images/icons/expressjs.svg",
-          },
-          {
-            name: "MongoDB",
-            href: "https://www.mongodb.com/",
-            icon: "/images/icons/mongodb.svg",
-          },
-          {
-            name: "MySQL",
-            href: "https://www.mysql.com/",
-            icon: "/images/icons/mysql.svg",
-          },
-          {
-            name: "Firebase",
-            href: "https://firebase.google.com/",
-            icon: "/images/icons/firebase.svg",
-          },
-        ],
-      },
-      {
-        title: "Others",
-        data: [
-          {
-            name: "Git",
-            href: "https://git-scm.com/",
-            icon: "/images/icons/git.svg",
-          },
-          {
-            name: "Github",
-            href: "https://github.com",
-            icon: "/images/icons/github.svg",
-          },
-          {
-            name: "Arduino",
-            href: "https://www.arduino.cc/",
-            icon: "/images/icons/arduino.svg",
-          },
-          {
-            name: "Linux",
-            href: "https://www.linux.org/",
-            icon: "/images/icons/linux.svg",
-          },
-          {
-            name: "Docker",
-            href: "https://www.docker.com/",
-            icon: "/images/icons/docker.svg",
-          },
-          {
-            name: "Figma",
-            href: "https://www.figma.com/",
-            icon: "/images/icons/figma.svg",
-          },
-          {
-            name: "Adobe Photoshop",
-            href: "https://www.adobe.com/en/products/photoshop",
-            icon: "/images/icons/photoshop.svg",
-          },
-          {
-            name: "Adobe Illustrator",
-            href: "https://www.adobe.com/en/products/illustrator",
-            icon: "/images/icons/illustrator.svg",
-          },
-          {
-            name: "Adobe Premiere Pro",
-            href: "https://www.adobe.com/en/products/premiere.html",
-            icon: "/images/icons/premierepro.svg",
-          },
-        ],
-      },
-    ],
-  },
-];
-
 const AboutSection = () => {
   const getData = (arr: any[], title: string) => {
     return arr.find((item) => item.title === title).data;
@@ -245,7 +54,7 @@ const AboutSection = () => {
           About Me
         </h2>
         <div className="flex flex-col lg:flex-row gap-8">
-          <div className="hidden items-center justify-center lg:flex flex-1 relative lg:items-center lg:justify-start">
+          <div className="max-h-[375px] hidden items-center justify-center lg:flex flex-1 relative lg:items-center lg:justify-start">
             <DevImage
               containerStyles="p-1 flex rounded-2xl outline outline-4 outline-primary w-[16rem] h-[16rem] lg:w-[18rem] lg:h-[18rem] xl:w-[20rem] xl:h-[20rem]"
               imgLink="/"
@@ -382,7 +191,38 @@ const AboutSection = () => {
                   <h3 className="items-center text-xl font-semibold mb-8 text-center lg:text-left">
                     Daily Tools
                   </h3>
-                 
+                  <div className="flex flex-col gap-6">
+                    {getData(skillData, "skills").map(
+                      (item: any, index: number) => (
+                        <div key={index} className="flex flex-col gap-4">
+                          <div className="flex gap-2 items-center text-primary">
+                            <LayoutPanelTop size={24} />
+                            <h4 className="capitalize font-medium">
+                              {item.title}
+                            </h4>
+                          </div>
+                          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                            {item.data.map((item: any, index: number) => (
+                              <Link
+                                key={index}
+                                href={item.href}
+                                rel="noopener noreferrer"
+                                className="flex flex-col items-center justify-center text-center gap-2 p-3 rounded-lg border border-primary hover:bg-primary hover:text-white transition-all duration-300"
+                              >
+                                <Image
+                                  src={item.icon}
+                                  alt={item.name}
+                                  width={32}
+                                  height={32}
+                                />
+                                <p className="text-sm">{item.name}</p>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      )
+                    )}
+                  </div>
                 </div>
               </TabsContent>
             </Tabs>
