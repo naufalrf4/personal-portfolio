@@ -42,7 +42,7 @@ const infoData = [
   },
 ];
 
-const AboutSection = () => {
+const AboutSection = ({ hidden }: { hidden: boolean }) => {
   const getData = (arr: any[], title: string) => {
     return arr.find((item) => item.title === title).data;
   };
@@ -54,13 +54,15 @@ const AboutSection = () => {
           About Me
         </h2>
         <div className="flex flex-col lg:flex-row gap-8">
-          <div className="max-h-[375px] hidden items-center justify-center lg:flex flex-1 relative lg:items-center lg:justify-start">
+
+          <div className={`max-h-[375px] flex items-center justify-center lg:flex flex-1 relative lg:items-center lg:justify-start ${hidden ? 'hidden' : ''}`}>
             <DevImage
               containerStyles="p-1 flex rounded-2xl outline outline-4 outline-primary w-[16rem] h-[16rem] lg:w-[18rem] lg:h-[18rem] xl:w-[20rem] xl:h-[20rem]"
               imgLink="/"
-              imgSrc="/images/naufalrf.png"
+              imgSrc="/images/naufalrf-1.png"
             />
           </div>
+ 
           <div className="flex-1">
             <Tabs defaultValue="personal">
               <TabsList className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 lg:max-w-full xl:border dark:border-none">
