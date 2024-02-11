@@ -26,7 +26,7 @@ const servicesData = [
   {
     title: "Web Design",
     description:
-      "I can create a mobile application for you. I have experience in React Native and Flutter.",
+      "I can create a beautiful and user-friendly design for your website or mobile application.",
     icon: <Blocks size={72} strokeWidth={0.8} />,
   },
 ];
