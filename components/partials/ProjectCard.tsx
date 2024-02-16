@@ -19,7 +19,7 @@ const ProjectCard = ({ project }: any) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Card className="mb-14 cursor-pointer transition-transform transform hover:scale-95 duration-300 ease-in-out h-[400px]">
+        <Card className="mb-14 cursor-pointer transition-transform transform hover:scale-95 duration-300 ease-in-out h-[425px]">
           <CardHeader className="py-4">
             <Image
               className="rounded-sm border-primary border-2"
