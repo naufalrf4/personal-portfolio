@@ -118,6 +118,17 @@ export const skillData = [
         title: "Backend",
         data: [
           {
+            name: "PHP",
+            href: "https://www.php.net/",
+            icon: "/images/icons/php.svg",
+          }
+          ,
+          {
+            name: "Laravel",
+            href: "https://laravel.com/",
+            icon: "/images/icons/laravel.svg",
+          },
+          {
             name: "Node.js",
             href: "https://nodejs.org/en/",
             icon: "/images/icons/nodejs.svg",
@@ -137,6 +148,7 @@ export const skillData = [
             href: "https://firebase.google.com/",
             icon: "/images/icons/firebase.svg",
           },
+
         ],
       },
       {
@@ -192,7 +204,7 @@ export const projectData = [
   {
     image: "/images/projects/semapor-1.png",
     image1: "/images/projects/semapor-2.png",
-    category: "Web",
+    category: "Laravel",
     title: "Semapor",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     link: "https://semapor.thena.my.id/",
@@ -201,7 +213,7 @@ export const projectData = [
   {
     image: "/images/projects/festida-1.png",
     image1: "/images/projects/festida-2.png",
-    category: "Web",
+    category: "Bootstrap",
     title: "IslamicVerse",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     link: "https://islamicverse.thena.my.id/",
@@ -210,27 +222,27 @@ export const projectData = [
   {
     image: "/images/projects/personal-1.png",
     image1: "/images/projects/personal-2.png",
-    category: "Web",
+    category: "React",
     title: "Personal Portfolio",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Personal Portfolio website serves as a comprehensive showcase of projects, qualifications, and a biography, all elegantly presented and easily accessible. Leveraging the power of arrays for streamlined data management and featuring the sleek styling of Tailwind CSS, this website offers a seamless and visually appealing experience. Developed with Next.js, it not only highlights the creator's skills and achievements but also demonstrates proficiency in cutting-edge web development technologies. Whether for potential clients, employers, or personal networking, this portfolio is designed to leave a lasting impression and effectively communicate the creator's unique talents and expertise.",
     link: "/",
     github: "/",
   },
   {
     image: "/images/projects/winscraft-1.png",
     image1: "/images/projects/winscraft-2.png",
-    category: "Web",
+    category: "React",
     title: "Winscraft",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Winscraft is a captivating Catalog Product Website specializing in knitted dolls. The purpose of this website creation was fourfold: To provide an attractive, user-friendly, and secure online store for Winscraft. To enhance the visibility and traffic of Winscraft's online store on search engines. To measure customer satisfaction and loyalty through the online store website. To boost conversion rates and sales of Winscraft's knitted doll products through the online store. Developed using Next.js and Sanity for CMS, Winscraft offers a seamless browsing and shopping experience for customers while effectively meeting the objectives outlined for its creation.",
     link: "https://winscraft.naufalrf.tech/",
     github: "/",
   },
   {
     image: "/images/projects/dokaw-1.png",
     image1: "/images/projects/dokaw-2.png",
-    category: "Web",
+    category: "React",
     title: "Dokaw",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Dokaw (Unfinished, Discontinued) was an AI-powered web application aimed at providing cocoa farmers with solutions for detecting and classifying diseases in their cocoa plants. Utilizing Computer Vision technology for image classification, the application allowed farmers to quickly upload images of cocoa plants suspected of disease and receive accurate disease classification results. Through the utilization of AI, the application could precisely identify the type of disease affecting cocoa plants based on uploaded images. Additionally, it provided clear and easily understandable information on the steps to manage the identified diseases, thereby assisting farmers in taking prompt and appropriate actions to prevent disease spread to other plants and minimize resulting losses. With this application, the goal was to enhance cocoa harvest productivity and quality by empowering farmers to take effective disease management measures, ultimately reducing losses caused by undetected disease outbreaks. Dokaw was developed using Next.js.",
     link: "https://dokaw.naufalrf.tech/",
     github: "/",
   },

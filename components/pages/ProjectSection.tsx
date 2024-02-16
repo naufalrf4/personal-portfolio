@@ -24,7 +24,7 @@ const ProjectSection = () => {
           My Projects
         </h2>
         <Tabs defaultValue={category}>
-          <TabsList className="w-full grid h-full md:grid-cols-2 lg:max-w-[320px] mb-12 mx-auto md:border">
+          <TabsList className="w-full grid h-full md:grid-cols-2 lg:grid-cols-4 lg:max-w-[640px] mb-12 mx-auto md:border">
             {categories.map((category, index) => {
               return (
                 <TabsTrigger

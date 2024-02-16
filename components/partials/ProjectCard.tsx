@@ -46,13 +46,19 @@ const ProjectCard = ({ project }: any) => {
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle className="mb-4">{project.title}</DialogTitle>
-          <Image
-          className="border-primary border-2"
-            src={project.image1}
-            alt={project.title}
-            width={450}
-            height={200}
-          />
+          <div className="flex items-center justify-center">
+         
+            <Image
+              className="border-primary border-2"
+              src={project.image1}
+              alt={project.title}
+              width={768}
+              height={432}
+            />
+
+                
+
+          </div>
         </DialogHeader>
 
         <div className="mt-4">
