@@ -45,7 +45,7 @@ const HeroSection = () => {
             </h3>
 
             <p className="text-sm md:text-md xl:text-base text-muted-foreground">
-            A second-year Computer Engineering Technology student at IPB University, I'm passionate about hardware, networks, and IoT. With a web developer background, I'm excited to dive into hardware and network engineering. Let's innovate together!
+            A second-year Computer Engineering Technology student at IPB University, I&apos;m passionate about hardware, networks, and IoT. With a web developer background, I&apos;m excited to dive into hardware and network engineering. Let&apos;s innovate together!
             </p>
           </div>
           <div className="flex flex-row gap-2">
