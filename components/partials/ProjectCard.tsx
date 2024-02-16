@@ -30,7 +30,9 @@ const ProjectCard = ({ project }: any) => {
             />
           </CardHeader>
           <div className="px-4 pb-6">
-            <h3 className="font-semibold text-lg mb-2">{project.title}</h3>
+            <h3 className="font-semibold text-lg lg:text-xl mb-2">
+              {project.title}
+            </h3>
             <p className="text-sm text-muted-foreground">
               {project.description.length > 100
                 ? project.description.substring(0, 100) + "..."
@@ -47,7 +49,6 @@ const ProjectCard = ({ project }: any) => {
         <DialogHeader>
           <DialogTitle className="mb-4">{project.title}</DialogTitle>
           <div className="flex items-center justify-center">
-         
             <Image
               className="border-primary border-2"
               src={project.image1}
@@ -55,9 +56,6 @@ const ProjectCard = ({ project }: any) => {
               width={768}
               height={432}
             />
-
-                
-
           </div>
         </DialogHeader>
 
